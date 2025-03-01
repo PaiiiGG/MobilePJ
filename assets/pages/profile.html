@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            overflow: hidden;
+            
+        }
+        .profile-container {
+            width: 100%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+        }
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .profile-email {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .menu-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .menu-item:hover {
+            background-color: #f1f1f1;
+        }
+        .menu-icon {
+            width: 24px;
+            margin-right: 10px;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+        .bottom-nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .bottom-nav a.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="/lendlyofficial/assets/images/dog.webp" alt="Profile Picture" class="profile-pic">
+        <div class="profile-name">Somchai Heehom</div>
+        <div class="profile-email">somchai.hee@gmail.com</div>
+        <div class="menu-item">✏️ Edit Profile</div>
+        <div class="menu-item">👤 Membership</div>
+        <div class="menu-item">🔔 Notifications</div>
+        <div class="menu-item">❓ Help</div>
+        <div class="menu-item">⚠️ Report a problem</div>
+        <div class="menu-item" onclick="logout()">🚪 Logout</div>
+    </div>
+    <div class="bottom-nav">
+        <a href="#" class="">🏠 Home</a>
+        <a href="#" class="">📰 Feed</a>
+        <a href="#" class="">📚 Library</a>
+        <a href="#" class="active">👤 Profile</a>
+    </div>
+    <script>
+        function logout() {
+            alert('Logging out...');
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>
